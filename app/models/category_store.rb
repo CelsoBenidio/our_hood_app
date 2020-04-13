@@ -1,0 +1,2 @@
+class CategoryStore < ApplicationRecord
+end
