@@ -6,7 +6,6 @@ class CreateStores < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :latitude
       t.integer :longitude
-      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
