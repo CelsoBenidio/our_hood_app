@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :stores do
     resources :products
   end
-  resources :categories, only[:new, :create, :destroy]
+  resources :categories, only: [:new, :create, :destroy]
 end
