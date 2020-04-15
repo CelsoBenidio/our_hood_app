@@ -1,9 +1,11 @@
-<h1>Products</h1>
+<div class="container">
+  <h1>Products</h1>
 
-<% @products.each do |product| %>
-        <h2><%= link_to product.name, store_product_path(@store, product) %></h2>
-        <h3><%= product.price %></h3>
-        <% end %>
+  <% @products.each do |product| %>
+          <h2><%= link_to product.name, store_product_path(@store, product) %></h2>
+          <h3><%= product.price %>₺</h3>
+          <% end %>
 
-
-<%= link_to "Back to the store", store_path(@store) %>
+  <%= link_to "Add a new product", new_store_product_path, class: "btn btn-primary" %>
+  <%= link_to "Back to the store", store_path(@store) %>
+</div>
