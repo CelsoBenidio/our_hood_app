@@ -7,19 +7,21 @@
           <thead>
             <th>Name</th>
             <th>Address</th>
+            <th>Description</th>
           </thead>
 
             <tr>
               <td><%= @store.name %></td>
               <td><%= @store.address %></td>
+              <td><%= @store.description %></td>
             </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <%= link_to "Back to all stores", stores_path, class: 'btn btn-primary m-1' %>
+  <%= link_to "Back to all stores", stores_path, class: 'btn button m-1' %>
   <%= link_to "Delete", store_path(@store),
   method: :delete,
-  data: {confirm: "Are you sure?"}, class: 'btn btn-danger m-1'%>
+  data: {confirm: "Are you sure?"}, class: 'btn button-secondary m-1'%>
 </div>
