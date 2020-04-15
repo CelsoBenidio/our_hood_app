@@ -2,6 +2,15 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :destroy]
   def index
     @stores = Store.all
+
+    @stores = Store.geocoded
+
+    @markers = @stores.map do |store|
+      {
+        lat: store.latitude,
+        lng: store.longitude
+      }
+    end
   end
 
   def show
