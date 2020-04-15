@@ -1,25 +1,30 @@
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container">
+  <div class="card-trip">
+    <%= image_tag('https://www.seçkinoptik.com/image/cache/gunes-gozlukleri/rb2140-901-50-3n-wayfarer-gunes-gozlukleri-ray-ban-1000x1000.jpg') %>
+    <div class="card-trip-infos">
+      <h2>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </h2>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      <h2>
+        <strong>Price:</strong>
+        <%= @product.price %>₺
+      </h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <h2>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </h2>
+    </div>
+  </div>
 
+  <%= link_to store_product_path(@store, @product), method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="fa fa-trash destroy_dose"></i>
+  <% end %>
 
-<div class="card-product" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.shopify.com/s/files/1/0063/9592/0436/products/41fxdPl8IGL.jpg?v=1570440870)">
-  Breakfast
+  <%=  link_to "Back to all products", store_products_path, class:"button" %>
+
 </div>
 
-<%= link_to store_product_path(@store, @product), method: :delete, data: { confirm: "Are you sure?" } do %>
-
-
-<%=  link_to "Back to all products", store_products_path %>
 

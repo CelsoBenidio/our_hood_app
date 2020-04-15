@@ -2,6 +2,16 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :destroy]
   def index
     @stores = Store.all
+
+    @stores = Store.geocoded
+
+    @markers = @stores.map do |store|
+      {
+        lat: store.latitude,
+        lng: store.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { store: store })
+      }
+    end
   end
 
   def show
@@ -33,6 +43,6 @@ class StoresController < ApplicationController
   end
 
   def store_params
-    params.require(:store).permit(:name, :address)
+    params.require(:store).permit(:name, :address, :photo)
   end
 end

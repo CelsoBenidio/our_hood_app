@@ -1,9 +1,18 @@
-<h1>Products</h1>
+<div class="container">
+  <h1>Products</h1>
 
-<% @products.each do |product| %>
+  <% @products.each do |product| %>
+    <div class="card-product">
+      <%= image_tag('https://www.seçkinoptik.com/image/cache/gunes-gozlukleri/rb2140-901-50-3n-wayfarer-gunes-gozlukleri-ray-ban-1000x1000.jpg') %>
+      <div class="card-product-infos">
         <h2><%= link_to product.name, store_product_path(@store, product) %></h2>
-        <h3><%= product.price %></h3>
-        <% end %>
+        <h3><%= product.price %>₺</h3>
+         <p> <%= product.description %></p>
+      </div>
+      </div>
+      <% end %>
 
+  <%= link_to "Add a new product", new_store_product_path, class: "button" %>
+  <%= link_to "Back to the store", store_path(@store), class:"button" %>
+</div>
 
-<%= link_to "Back to the store", store_path(@store) %>

@@ -5,21 +5,27 @@
       <table class="table table-bordered">
         <tbody>
           <thead>
+            <th>Picture</th>
             <th>Name</th>
             <th>Address</th>
+            <th>Description</th>
+            <th>More Info</th>
           </thead>
 
             <tr>
+              <td><%= cl_image_tag @store.photo.key, height: 300, width: 400, crop: :fill %></td>
               <td><%= @store.name %></td>
               <td><%= @store.address %></td>
+              <td><%= @store.description %></td>
+              <td><%= link_to "See more", store_products_path(@store) %></td>
             </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <%= link_to "Back to all stores", stores_path, class: 'btn btn-primary m-1' %>
+  <%= link_to "Back to all stores", stores_path, class: 'btn button m-1' %>
   <%= link_to "Delete", store_path(@store),
   method: :delete,
-  data: {confirm: "Are you sure?"}, class: 'btn btn-danger m-1'%>
+  data: {confirm: "Are you sure?"}, class: 'btn button-secondary m-1'%>
 </div>

@@ -7,6 +7,13 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'select2/dist/css/select2';
+@import 'mapbox-gl/dist/mapbox-gl';
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 
 // Your CSS partials
 @import "components/index";

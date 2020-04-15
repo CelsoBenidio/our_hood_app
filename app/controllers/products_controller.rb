@@ -1,23 +1,20 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_store
 
   def index
-    @products = Product.all
-    @store = Store.find(params[:store_id])
+    @products = @store.products
   end
 
   def show
-    @store = Store.find(params[:store_id])
   end
 
   def new
     @product = Product.new
-    @store = Store.find(params[:store_id])
   end
 
   def create
     @product = Product.new(product_params)
-    @store = Store.find(params[:store_id])
     @product.store = @store
     if @product.save
       redirect_to store_product_path(@store, @product), notice: 'Product is created.'
@@ -40,7 +37,6 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    @store = Store.find(params[:store_id])
     redirect_to store_products_path, notice: "Product is removed."
   end
 
@@ -49,6 +45,10 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def set_store
+    @store = Store.find(params[:store_id])
   end
 
   def product_params
