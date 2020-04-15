@@ -6,6 +6,7 @@
       <%= simple_form_for @store do |f| %>
         <%= f.input :name, input_html: { autocomplete: 'off' } %>
         <%= f.input :address, id: 'store_address' %>
+        <%= f.input :photo, as: :file %>
         <%= f.button :submit, class: 'btn button' %>
       <% end %>
       <%= link_to "Back to all stores", stores_path, class: 'btn btn-lg button-secondary'%>
