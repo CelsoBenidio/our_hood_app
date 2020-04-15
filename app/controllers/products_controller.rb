@@ -3,9 +3,11 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @store = Store.find(params[:store_id])
   end
 
   def show
+    @store = Store.find(params[:store_id])
   end
 
   def new
@@ -38,6 +40,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
+    @store = Store.find(params[:store_id])
     redirect_to store_products_path, notice: "Product is removed."
   end
 
