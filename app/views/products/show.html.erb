@@ -12,3 +12,9 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
+
+<%= link_to store_product_path(@store, @product), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <i class="fa fa-trash destroy_dose"></i>
+<% end %>
+
+<%=  link_to "Back to all products", store_products_path %>
