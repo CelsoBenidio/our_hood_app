@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OurHoodApp</title>
+    <link rel="icon" href="">
+    <title>Our♥Hood</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,8 @@
   </head>
 
   <body>
+    <%= render "layouts/navbar" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
