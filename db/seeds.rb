@@ -1,3 +1,4 @@
+
 puts "Cleaning database!"
 
 Store.destroy_all
@@ -15,3 +16,4 @@ paris_texas = Store.create!(name: "Paris Texas", address: "Bereketzade, İstanbu
  description: "Bringing the best of Paris and Texas together to create Istanbul fusion")
 
 puts "Finished!"
+
