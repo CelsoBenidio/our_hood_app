@@ -5,12 +5,14 @@
       <table class="table table-bordered">
         <tbody>
           <thead>
+            <th>Picture</th>
             <th>Name</th>
             <th>Address</th>
             <th>Description</th>
           </thead>
 
             <tr>
+              <td><%= cl_image_tag @store.photo.key, height: 300, width: 400, crop: :fill %></td>
               <td><%= @store.name %></td>
               <td><%= @store.address %></td>
               <td><%= @store.description %></td>
@@ -19,7 +21,6 @@
       </table>
     </div>
   </div>
-  <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
 
   <%= link_to "Back to all stores", stores_path, class: 'btn button m-1' %>
   <%= link_to "Delete", store_path(@store),
