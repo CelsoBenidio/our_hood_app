@@ -5,7 +5,7 @@
       <%= f.input :name %>
       <%= f.input :price %>
       <%= f.input :description %>
-      <%= f.association :categories,class:"select2", include_hidden: false %>
+      <%= f.association :categories,input_html: { multiple: true, class:"select2" }, include_hidden: false, as: :select  %>
     </div>
 
     <div class="form-actions">

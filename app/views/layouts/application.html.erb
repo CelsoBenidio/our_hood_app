@@ -9,22 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+
   </head>
 
   <body>
+    <%= render "layouts/navbar" %>
     <%= yield %>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="https://github.com/CelsoBenidio/our_hood_app">><i class="fab fa-github"></i></a>
-      <a href="https://www.instagram.com/lewagonist/">><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-    </div>
-    <div class="footer-copyright">
-      From Istanbul with <i class="fas fa-heart"></i> .
-    </div>
-  </div>
-
+    <%= render "layouts/footer" %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </body>
 </html>
