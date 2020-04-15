@@ -1,8 +1,11 @@
-
 puts "Cleaning database!"
 
 Store.destroy_all
+Product.destroy_all
+Category.destroy_all
 
+puts "everythings deleted"
+store = Store.create!(name: "le wagon", address:"İstanbul")
 le_wagon_istanbul = Store.create!(name: "Le Wagon", address:"Dibek Sk. No:15 Hacımimi 34425 Beyoğlu/İstanbul, Turkey", description: "Change your life, learn to code.
 Through immersive coding bootcamps, Le Wagon teaches you the skills and entrepreneurial mindset you need to thrive - now and in the future.")
 
@@ -15,5 +18,9 @@ galata_grand_bazaar = Store.create!(name: "Galata Grand Bazaar", address: "Müey
 paris_texas = Store.create!(name: "Paris Texas", address: "Bereketzade, İstanbul",
  description: "Bringing the best of Paris and Texas together to create Istanbul fusion")
 
-puts "Finished!"
+categories = %w(watches jewelleries sunglasses food vintage accessories )
+categories.each do |category|
+  Category.create!(name:category)
+end
 
+puts "seeds are created"
