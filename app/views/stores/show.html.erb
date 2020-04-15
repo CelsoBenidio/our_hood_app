@@ -8,12 +8,14 @@
             <th>Name</th>
             <th>Address</th>
             <th>Description</th>
+            <th>More Info</th>
           </thead>
 
             <tr>
               <td><%= @store.name %></td>
               <td><%= @store.address %></td>
               <td><%= @store.description %></td>
+              <td><%= link_to "See more", store_products_path(@store) %></td>
             </tr>
         </tbody>
       </table>
