@@ -18,6 +18,14 @@ class StoresController < ApplicationController
     authorize @store
   end
 
+  def edit
+    authorize @stores
+  end
+
+  def update
+    authorize @stores
+  end
+
   def new
     @store = Store.new
     authorize @store
