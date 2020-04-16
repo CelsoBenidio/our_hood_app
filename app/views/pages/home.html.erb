@@ -2,31 +2,36 @@
   <div class="container">
     <h1>The best local shops of <strong>Istanbul</strong></h1>
     <p>Thousands of stores have increased their sales by an average of 20%.</p>
-    <a class="btn homepage-primary-button" href=" <%= stores_path %>">Join now ➜</a>
+    <!-- <a class="btn homepage-primary-button" href=" <%= stores_path %>">Join now ➜</a> -->
+    <div class="container" style="max-width: 600px">
+      <div class="search-form-control form-group">
+        <%= render 'search_form' %>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="container text-center" style="padding-top: 40px">
   <h2><b>How it works</b></h2>
     <div class="info-cards">
       <div class="info-card">
-      <div class="info-card-img"> <%= image_tag "logo.png", class: "card-img" %> </div>
-      <h4><b>Value Proposal</b></h4>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <%= image_tag "apply.svg", class: "info-card-img" %>
+      <h4><b>Local shops</b></h4>
+      <p>The most inconic stores from the authentic shopping districts of Istanbul.</p>
     </div>
     <div class="info-card">
-      <div class="info-card-img"> <%= image_tag "logo.png", class: "card-img" %> </div>
-      <h4><b>Value Proposal</b></h4>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <%= image_tag "product.svg", class: "info-card-img" %>
+      <h4><b>Adjusted plans</b></h4>
+      <p>A plan that fits your needs with no strings attached.</p>
     </div>
     <div class="info-card">
-      <div class="info-card-img"> <%= image_tag "logo.png", class: "card-img" %> </div>
-      <h4><b>Value Proposal</b></h4>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <%= image_tag "learn.svg", class: "info-card-img" %>
+      <h4><b>24/7 support</b></h4>
+      <p>Ongoing Our.Hood bilingual support service.</p>
     </div>
   </div>
 </div>
-  <div class="banner text-align" style="background: red">
+  <div class="banner text-align" style="background: green">
     <p>To add: another nice thing about the service</p>
   </div>
 
