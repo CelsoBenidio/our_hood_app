@@ -25,3 +25,19 @@ color: white;
 .button-secondary:hover{
   color: white;
 }
+
+.add-to-btn {
+  background-color: #EE4266;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 200px;
+  padding-right: 200px;
+  opacity: 0.8;
+  &:hover {
+    text-decoration: none;
+    color:white;
+    opacity: 1;
+    transition: 0.4s;
+  }
+}
