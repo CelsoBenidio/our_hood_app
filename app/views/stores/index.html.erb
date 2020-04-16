@@ -9,7 +9,7 @@
   <div class="row">
     <% @stores.each do |store| %>
       <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?store');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path store.photo.key %>')">
           <div class="card-description">
             <h2><%= store.name %></h2>
           </div>

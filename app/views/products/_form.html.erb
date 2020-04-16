@@ -5,13 +5,13 @@
       <%= f.input :name %>
       <%= f.input :price %>
       <%= f.input :description %>
-      <%= f.association :categories,class:"select2", include_hidden: false %>
+      <%= f.association :categories, collection: Category.all, input_html: { multiple: true, class:"select2_form" }, include_hidden: false, as: :select  %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit %>
+      <%= f.button :submit, class:"button" %>
     </div>
   <% end %>
 
-  <%=  link_to "Back to all products", store_products_path %>
+  <%=  link_to "Back to all products", store_products_path, class:"button" %>
 </div>
