@@ -3,4 +3,12 @@ class Product < ApplicationRecord
   has_many :category_products, dependent: :destroy
   has_many :categories, through: :category_products
   validates :name, presence: true, uniqueness: true
+  include PgSearch::Model
+  multisearchable against: [:name, :description]
 end
+
+
+PgSearch::Multisearch.rebuild(Product)
+PgSearch::Multisearch.rebuild(Store)
+
+results = PgSearch.multisearch('paris texas')

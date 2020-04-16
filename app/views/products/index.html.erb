@@ -12,6 +12,25 @@
       </div>
       <% end %>
 
+<div id="products">
+        <%= form_tag store_products_path(@store), method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a product" %>
+          <%= submit_tag "Go", class: "btn btn-primary" %>
+        <% end %>
+        <% if @products_results.present? %>
+        <% @products_results.each do |result| %>
+          <h4><%= result.searchable.name %></h4>
+          <p><%= result.searchable.description %></p>
+          <p>type: <%= result.searchable_type %></p>
+        <% end %>
+        <% else %>
+        <h2><% puts "No search results" %></h2>
+        <% end %>
+</div>
+
   <%= link_to "Add a new product", new_store_product_path, class: "button" %>
   <%= link_to "Back to the store", store_path(@store), class:"button" %>
 </div>
