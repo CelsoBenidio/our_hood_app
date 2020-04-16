@@ -9,6 +9,8 @@ class ProductsController < ApplicationController
     else
       @products = @store.products
     end
+
+    @products = policy_scope(@store.products)
   end
 
   def show
@@ -16,11 +18,13 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    authorize @product
   end
 
   def create
     @product = Product.new(product_params)
     @product.store = @store
+    authorize @product
     if @product.save
       redirect_to store_product_path(@store, @product), notice: 'Product is created.'
     else
@@ -50,6 +54,7 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+    authorize @product
   end
 
   def set_store

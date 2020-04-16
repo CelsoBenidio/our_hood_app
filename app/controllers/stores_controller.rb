@@ -1,7 +1,7 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :destroy]
   def index
-    @stores = Store.all
+    @stores = policy_scope(Store).all
 
     @stores = Store.geocoded
 
@@ -15,17 +15,28 @@ class StoresController < ApplicationController
   end
 
   def show
+    authorize @store
+  end
+
+  def edit
+    authorize @store
+  end
+
+  def update
+    authorize @store
   end
 
   def new
     @store = Store.new
+    authorize @store
   end
 
   def create
     @store = Store.new(store_params)
     @store.save
+    authorize @store
 
-    redirect_to store_path(@store)
+    redirect_to stores_path(@store)
   end
 
 
