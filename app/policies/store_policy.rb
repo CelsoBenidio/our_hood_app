@@ -6,10 +6,18 @@ class StorePolicy < ApplicationPolicy
   end
 
   def create?
-    return true
+    true
   end
 
   def show?
     true
+  end
+
+  def update?
+    record.user == user || user.admin
+  end
+
+  def destroy?
+    record.user == user || user.admin
   end
 end

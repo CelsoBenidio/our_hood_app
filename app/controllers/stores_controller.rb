@@ -18,6 +18,14 @@ class StoresController < ApplicationController
     authorize @store
   end
 
+  def edit
+    authorize @store
+  end
+
+  def update
+    authorize @store
+  end
+
   def new
     @store = Store.new
     authorize @store
@@ -28,7 +36,7 @@ class StoresController < ApplicationController
     @store.save
     authorize @store
 
-    redirect_to store_path(@store)
+    redirect_to stores_path(@store)
   end
 
 
