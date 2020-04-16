@@ -1,15 +1,18 @@
 .button{
   background-color: #10E380;
   color: white;
-  border-radius: 10rem;
-  margin: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 12px 32px;
-  border-radius: 50px;
+  border-radius: 5px;
+  padding: 15px;
 }
 
-.button:hover{
+.button-first{
+  background-color: #10E380;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.button-first:hover{
   background-color: #0DBF6C;
   color: white;
 }
@@ -22,7 +25,6 @@ color: white;
 .button-secondary:hover{
   color: white;
 }
-
 
 .homepage-primary-button{
   background-color: #10E380;
@@ -38,3 +40,19 @@ color: white;
   background-color: #0DBF6C;
   color: white;
 }
+
+.add-to-btn {
+  background-color: #EE4266;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 200px;
+  padding-right: 200px;
+  opacity: 0.8;
+  &:hover {
+    text-decoration: none;
+    color:white;
+    opacity: 1;
+    transition: 0.4s;
+  }
+
