@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Here are our products and stores in our app</h1>
+  <div class="row">
+    <% @products.all.sample(4).each do |product| %>
+    <div class="col">
+      <div class="card">
+        <h1><%= product.name %></h1>
+        <p><%= product.description %></p>
+      </div>
+    </div>
+    <% end %>
+    <div class="row">
+      <% @stores.all.sample(4).each do |store| %>
+      <div class="col">
+        <div class="card">
+          <h1><%= store.name %></h1>
+          <p><%= store.description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<%= link_to "Back to Homepage", root_path, class: 'btn button m-1' %>

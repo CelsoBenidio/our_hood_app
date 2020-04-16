@@ -25,6 +25,7 @@ gem 'geocoder'
 gem 'devise'
 
 gem 'cloudinary', '~> 1.12.0'
+gem 'pg_search'
 
 
 # Use Active Storage variant
