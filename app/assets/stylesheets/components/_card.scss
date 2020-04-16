@@ -88,7 +88,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -97,4 +96,20 @@
   position: relative;
 }
 
+.container .info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.info-card {
+  width: 300px;
+  text-align: center;
+  display: inline-grid;
+  padding: 20px;
+}
+
+.info-card-img {
+  width: 100%;
+}
 

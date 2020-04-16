@@ -1,4 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="container" style="padding: 0px">
       <a class="navbar-brand" href ="<%= root_path %>" >
          <%= image_tag 'logo.png' %>
     </a>
@@ -9,7 +10,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" style="display: inherit">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/CelsoBenidio" />
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
@@ -17,11 +18,12 @@
             </div>
           </li>
           <% else %>
-          <li class="nav-item">
-            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+          <li class="nav-item" style="display: block ruby">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <a class="btn homepage-primary-button" style="margin-left: 20px" href=" <%= new_user_registration_path %>">Register</a>
           </li>
           <% end %>
         </ul>
       </div>
+    </div>
     </div>
