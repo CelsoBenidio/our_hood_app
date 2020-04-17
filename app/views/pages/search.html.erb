@@ -1,20 +1,27 @@
+<div class="card-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1472095636650-197e6d619afe?ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80)">
+<h1>The best products from Istanbul</h1></div>
+<div class="container search-bar", style="max-width: 700px">
+  <div class="search-form-control form-group">
+    <%= render 'search_form' %>
+  </div>
+</div>
+
+
 <div class="container min-vh-100">
-  <div class="row">
-    <div class="col">
+    <h3 style="text-align:center;">Search <strong>results</strong></h3>
       <div id="search">
-        <%= render 'search_form' %>
-        <% if @results.present? %>
-          <% @results.each do |result| %>
+            <% if @results.present? %>
+            <% @results.each do |result| %>
             <h4><%= result.searchable.name %></h4>
             <p><%= result.searchable.description %></p>
             <p>type: <%= result.searchable_type %></p>
-          <% end %>
-        <% elsif !params[:query].present? %>
-          <%= render 'search_suggestions' %>
-        <% else %>
-          <%= render 'search_suggestions' %>
-         <% end %>
+            <% end %>
+            <% elsif !params[:query].present? %>
+            <%= render 'search_suggestions' %>
+            <% else %>
+            <%= render 'search_suggestions' %>
+            <% end %>
+          </div>
       </div>
     </div>
   </div>
-</div>

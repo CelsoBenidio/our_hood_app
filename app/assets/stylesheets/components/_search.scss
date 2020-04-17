@@ -1,13 +1,13 @@
-.search-form-control {
-  position: relative;
-}
+// .search-form-control {
+//   position: relative;
+// }
 
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-}
+// .search-form-control .btn {
+//   position: absolute;
+//   top: 8px;
+//   bottom: 8px;
+//   right: 8px;
+// }
 
 .search-form-control .form-control {
   height: 3.5rem;
@@ -22,12 +22,21 @@
 }
 
 
+
 .search-form-style{
-  display: block;
+  display: inline-block;
   text-align: center;
+  min-width:100%;
+}
+
+.search-form-button{
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 
 .input-width{
-  min-width:70vh;
+  min-width:50vh;
 }
+

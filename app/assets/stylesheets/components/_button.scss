@@ -3,6 +3,13 @@
   color: white;
   border-radius: 5px;
   padding: 15px;
+  transition: 0.5s;
+  opacity: 0.8;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+  }
 }
 
 .button-first{
@@ -18,8 +25,8 @@
 }
 
 .button-secondary{
-background-color: #EE4266;
-color: white;
+  background-color: #EE4266;
+  color: white;
 }
 
 .button-secondary:hover{
@@ -39,6 +46,11 @@ color: white;
 .homepage-primary-button:hover{
   background-color: #0DBF6C;
   color: white;
+}
+
+.homepage-button-secondary{
+  background-color: white;
+  color: #10E380;
 }
 
 .add-to-btn {

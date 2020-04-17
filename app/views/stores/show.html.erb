@@ -1,15 +1,21 @@
-<div class="container">
-<div class="card-trip">
-  <div class="card-image-container">
+<div class="container" style="max-width: 600px">
+<div class="card-trip" style="max-width: 600px">
+  <div class="card-image-container" style="max-width: 600px">
   <%= cl_image_tag @store.photo.key, class: 'card-img-store'%>
   </div>
-  <div class="card-trip-infos">
+  <div class="card-trip-infos" style="padding: 30px">
     <div>
       <h2><%= @store.name %></h2>
+      <p><%= link_to "Manage store products", store_products_path(@store) %></p>
       <h6><%= @store.address %></h6>
       <p><%= @store.description %></p>
-      <p><%= link_to "See more", store_products_path(@store) %></p>
     </div>
+  </div>
+  <div class="container" style="padding-bottom: 30px">
+  <%= link_to "Back to my stores", stores_path, class: 'homepage-primary-button' %>
+  <%= link_to "Delete Store", store_path(@store),
+  method: :delete,
+  data: {confirm: "Are you sure?"}%>
   </div>
 </div>
 

@@ -1,10 +1,10 @@
-<div class="search-form p-3">
-<%= form_tag search_path,class:"form-inline my-2 my-lg-0 search-form-style",style:"display:block", method: :get do %>
+<div class="search-form p-2">
+<%= form_tag search_path,class:"form-inline my-2 my-lg-0 search-form-style", method: :get do %>
   <%= text_field_tag :query,
   params[:query],
   class: "form-control input-width",
   placeholder: "Search by product or store" %>
-  <%= submit_tag "Search", class: "btn search-button" %>
+  <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0 search-form-button" %>
 <% end %>
 
 </div>
