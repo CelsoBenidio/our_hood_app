@@ -13,8 +13,7 @@ user = User.create!(email: "admin@ourhood.com", password: "123456", name: "admin
 puts "Creating stores"
 le_wagon_istanbul = Store.create!(name: "Le Wagon", address:"Dibek Sk. No:15 Hacımimi 34425 Beyoğlu/İstanbul, Turkey",
   description: "Change your life, learn to code.
-Through immersive coding bootcamps, Le Wagon teaches you the skills and entrepreneurial mindset you need to thrive - now and in the future."
-,user: user)
+Through immersive coding bootcamps, Le Wagon teaches you the skills and entrepreneurial mindset you need to thrive - now and in the future.",user: user)
 file = URI.open('https://res.cloudinary.com/dbjtqhjxi/image/upload/v1586955844/images/LeWagonIstanbul/LeWagonIstanbulNumber1_qrrfmo.jpg')
 le_wagon_istanbul.photo.attach(io: file, filename: 'le_wagon_istanbul.png', content_type: 'image/png')
 
@@ -32,7 +31,7 @@ file = URI.open('https://res.cloudinary.com/dbjtqhjxi/image/upload/v1586955844/i
 paris_texas.photo.attach(io: file, filename: 'paris_texas.png', content_type: 'image/png')
 
 #New stores
-tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop", address: "Taya Hatun Sokak Sukran Han NO:C3
+tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop",user: user, address: "Taya Hatun Sokak Sukran Han NO:C3
   Sirkeci, Istanbul 34110 Turkey", description:"Tuncer Gift Shop is located in Sultanahmet since 2000s.
   At the beginning, we started working just on the street and just with one person who is our founder.
   After a while we expanded our job and we opened first showroom in 2008. When we came to 2012, we have
@@ -44,14 +43,14 @@ tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop", address: "Taya Hatun 
   tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
 
 
-aslan_gift_shop = Store.create!(name: "Aslan Gift Shop", address: "Ankara Cad. Hocapasa Sk. Demir Han
+aslan_gift_shop = Store.create!(name: "Aslan Gift Shop",user: user, address: "Ankara Cad. Hocapasa Sk. Demir Han
   No:1 Sirkeci/Istanbul Sirkeci, Istanbul 34080 Turkey", description:"We Are Selling High Quality Souvenirs For Our Visitors
   To Remind Good Memories Of Istanbul Or Giving Their Friends As A Gift. Nargiles, Nazars, Mugs, Bracel
   ets And Every Kind Of Turkish Themed Gifts Are Being Sold In Our Fancy Shop In Sirkeci/istanbul.")
   file = URI.open('https://q-cf.bstatic.com/images/hotel/max1024x768/186/186682383.jpg')
   aslan_gift_shop.photo.attach(io: file, filename: 'aslan_gift_shop.png', content_type: 'image/png')
 
-tree_of_life_ceramics_and_gift_shop = Store.create!(name: "Tree of Life Ceramics & Gift Shop",
+tree_of_life_ceramics_and_gift_shop = Store.create!(name: "Tree of Life Ceramics & Gift Shop",user: user,
   address: "Binbirdirek Meydani Sokak no 3/A, Istanbul 34122 Turkey", description:"Tree of Life
   Ceramics & Gift Shop is newly open and provides new interesting products with an excellent customer
   service")
@@ -59,24 +58,24 @@ tree_of_life_ceramics_and_gift_shop = Store.create!(name: "Tree of Life Ceramics
   tree_of_life_ceramics_and_gift_shop.photo.attach(io: file, filename: 'tree_of_life_ceramics_and_gift
   _shop.png', content_type: 'image/png')
 
-ruby_ceramics_and_gift_shop = Store.create!(name: "Ruby Ceramics & Gift Shop", address: "Boyaci Ahmet
+ruby_ceramics_and_gift_shop = Store.create!(name: "Ruby Ceramics & Gift Shop",user: user, address: "Boyaci Ahmet
   Sok. No:22/A, Istanbul Turkey", description:"One of the best ceramics stores in Istanbulheritage_nomadic_art_gallery")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/ee/d8/25/ruby-ceramics-gift-shop.jpg')
   ruby_ceramics_and_gift_shop.photo.attach(io: file, filename: 'ruby_ceramics_and_gift_shop.png', content_type: 'image/png')
 
-heritage_nomadic_art_gallery = Store.create!(name: "Heritage Nomadic Art Gallery", address: "Caferiye Sok. No : 1 34400 Sultan
+heritage_nomadic_art_gallery = Store.create!(name: "Heritage Nomadic Art Gallery",user: user, address: "Caferiye Sok. No : 1 34400 Sultan
   ahmet, Istanbul 34400 Turkey", description:"Discover the magic world of kilims and carpets. Awide range of exceptional villa
   ge rugs, individually handmade with natural dyes and the finest handspun wool.")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/05/0e/84/c4/heritage-nomadic-art.jpg')
   heritage_nomadic_art_gallery.photo.attach(io: file, filename: 'heritage_nomadic_art_gallery.png', content_type: 'image/png')
 
-rosemary_spice_and_gift = Store.create!(name: "Rosemary spice & gift", address: "kaleci Sokak no 8 Kucukayasofya mah., Istanbul
+rosemary_spice_and_gift = Store.create!(name: "Rosemary spice & gift",user: user, address: "kaleci Sokak no 8 Kucukayasofya mah., Istanbul
  34122 Turkey", description:"Dear customer our shop near by Sultanahmet mosque we have ceramics special plates and may gift almo
  st you can find everything about gift in our shop")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/00/ea/af/rosemary-spice-gift.jpg')
   rosemary_spice_and_gift.photo.attach(io: file, filename: 'rosemary_spice_and_gift.png', content_type: 'image/png')
 
-galeria_rugs = Store.create!(name: "Galeria Rugs", address: "Taya Hatun Sk. No. 8E Sirkeci, Istanbul 34122 Turkey",
+galeria_rugs = Store.create!(name: "Galeria Rugs",user: user, address: "Taya Hatun Sk. No. 8E Sirkeci, Istanbul 34122 Turkey",
   description:"Galeria Rugs was established in 2008. Its founder, Selcuk Orman, has extensive experience in carpets from all over
   the world having being a director for international carpet galleries and auction houses. Our purpose is to share the true exper
   ience and knowledge we have of hand woven carpets with enthusiasts and collectors around the world. Since the knowledge of this
@@ -85,17 +84,17 @@ galeria_rugs = Store.create!(name: "Galeria Rugs", address: "Taya Hatun Sk. No. 
   file = URI.open('https://cdn.fodors.com/ee/files/slideshows/1-What-To-Buy-Istanbul-Rugs.jpg')
   galeria_rugs.photo.attach(io: file, filename: 'galeria_rugs.png', content_type: 'image/png')
 
-sahaflar_carsisi = Store.create!(name: "Sahaflar Carsisi", address: "Istanbul 34430 Turkey", description:"This historic book bazaar
+sahaflar_carsisi = Store.create!(name: "Sahaflar Carsisi",user: user, address: "Istanbul 34430 Turkey", description:"This historic book bazaar
  was popular with famous writers of the 16th and 17th centuries. Today, it is one of the most known areas in the city to find rare
  and used books.")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/0d/c4/03/56/sahaflar-carsisi.jpg')
   sahaflar_carsisi.photo.attach(io: file, filename: 'sahaflar_carsisi.png', content_type: 'image/png')
 
-last_shop_gift_shop = Store.create!(name: "Last Shop Gift Shop", address: "Istanbul, Karakoy, Turkey", description:"Cheeper than Grand Bazaar")
+last_shop_gift_shop = Store.create!(name: "Last Shop Gift Shop",user: user, address: "Istanbul, Karakoy, Turkey", description:"Cheeper than Grand Bazaar")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/66/4d/a1/last-shop-gift-shop.jpg')
   last_shop_gift_shop.photo.attach(io: file, filename: 'last_shop_gift_shop.png', content_type: 'image/png')
 
-troy_rug_bazaar = Store.create!(name: "Troy Rug Store", address: "Arasta Bazaar no. 39 Sultanahmet, Istanbul Turkey", description:"Troy Rug Sto
+troy_rug_bazaar = Store.create!(name: "Troy Rug Store",user: user, address: "Arasta Bazaar no. 39 Sultanahmet, Istanbul Turkey", description:"Troy Rug Sto
   re is a long established seller of high quality modern and antique carpets, rugs, kilims and other nomadic art situated in the delightful Ara
   sta Bazaar in historic Istanbul. We stock pieces from all over Turkey, Iran and Afghanistan. We pride ourselves on a professional and hassle-
   free selling experience ensuring the customer is delighted with his or her purchase. There is never any obligation to buy and we welcome cust
@@ -103,6 +102,7 @@ troy_rug_bazaar = Store.create!(name: "Troy Rug Store", address: "Arasta Bazaar 
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/05/ab/8d/b8/troy-rug.jpg')
   troy_rug_bazaar.photo.attach(io: file, filename: 'troy_rug_bazaar.png', content_type: 'image/png')
 
+puts "creatig categories"
 
 categories = %w(watches jewelleries sunglasses food vintage accessories clothing arts crafts beauty tools sports&outdoors home&kitchen luggage giftcards  )
 categories.each do |category|
@@ -110,7 +110,7 @@ categories.each do |category|
 end
 
 
-
+puts "creating products"
 
 mosaic_table_lamp_1 = Product.create!(name: "Mosaic Table Lamp Model 1", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
 mosaic_table_lamp_2 = Product.create!(name: "Mosaic Table Lamp Model 2", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)

@@ -13,7 +13,7 @@
   <h3 style="padding-bottom: 20px">Your store <strong>results</strong></h3>
   <div class="row">
     <% @stores.each do |store| %>
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-12 col-md-6 col-lg-3 m-3">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path store.photo.key %>')">
           <div class="card-description">
             <h2><%= store.name %></h2>

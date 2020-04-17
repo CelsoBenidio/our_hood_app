@@ -3,10 +3,7 @@
    <div class="row">
     <% @products.all.sample(4).each do |product| %>
     <div class="col">
-      <div class="card">
-        <h1><%= product.name %></h1>
-        <p><%= product.description %></p>
-      </div>
+      <%= render 'products/product_card', product: product %>
     </div>
     <% end %>
     <div class="row">
