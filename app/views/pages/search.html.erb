@@ -1,0 +1,22 @@
+
+<div class="container">
+  <h1>Search page</h1>
+  <div class="row">
+    <div class="col">
+      <div id="search">
+        <%= render 'search_form' %>
+        <% if @results.present? %>
+          <% @results.each do |result| %>
+            <h4><%= result.searchable.name %></h4>
+            <p><%= result.searchable.description %></p>
+            <p>type: <%= result.searchable_type %></p>
+          <% end %>
+        <% elsif !params[:query].present? %>
+          <%= render 'search_suggestions' %>
+        <% else %>
+          <%= render 'search_suggestions' %>
+         <% end %>
+      </div>
+    </div>
+  </div>
+</div>

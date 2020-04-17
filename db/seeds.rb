@@ -28,4 +28,15 @@ categories.each do |category|
   Category.create!(name:category)
 end
 
+
+
+
+mosaic_table_lamp = Product.create!(name: "Mosaic Table Lamp", description: "Mosaic table lamp is excellent item to have it home.", store: le_wagon_istanbul)
+turkish_tea_pot_model_no1 = Product.create!(name: "Turkish Teapot Stainless Steel Model No1", description: "Turkish Tea Pots (Another name is Çaydanlık) are really important to brew perfect tea.", store: le_wagon_istanbul)
+turkish_tea_pot_model_no2 = Product.create!(name: "Turkish Teapot Stainless Steel Model No2", description: "Turkish Tea Pots (Another name is Çaydanlık) are really important to brew perfect tea.", store: le_wagon_istanbul)
+turkish_tea_pot_model_no3 = Product.create!(name: "Turkish Teapot Stainless Steel Model No3", description: "Turkish Tea Pots (Another name is Çaydanlık) are really important to brew perfect tea.", store: le_wagon_istanbul)
+turkish_tea_pot_model_no4 = Product.create!(name: "Turkish Teapot Stainless Steel Model No4", description: "Turkish Tea Pots (Another name is Çaydanlık) are really important to brew perfect tea.", store: paris_texas)
+prayer_beads = Product.create!(name: "Andiz Tree Prayer Beads", description: "A bead is a small, decorative object that is formed in a variety of shapes and sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: galata_grand_bazaar)
 puts "seeds are created"
+
+
