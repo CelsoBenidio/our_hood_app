@@ -31,8 +31,7 @@ file = URI.open('https://res.cloudinary.com/dbjtqhjxi/image/upload/v1586955844/i
 paris_texas.photo.attach(io: file, filename: 'paris_texas.png', content_type: 'image/png')
 
 #New stores
-tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop",user: user, address: "Taya Hatun Sokak Sukran Han NO:C3
-  Sirkeci, Istanbul 34110 Turkey", description:"Tuncer Gift Shop is located in Sultanahmet since 2000s.
+tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop",user: user, address: "Istanbul,Turkey", description:"Tuncer Gift Shop is located in Sultanahmet since 2000s.
   At the beginning, we started working just on the street and just with one person who is our founder.
   After a while we expanded our job and we opened first showroom in 2008. When we came to 2012, we have
   five showrooms in Istanbul and nearly 15 team members.We believe that customers are special; so we
@@ -43,15 +42,14 @@ tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop",user: user, address: "
   tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
 
 
-aslan_gift_shop = Store.create!(name: "Aslan Gift Shop",user: user, address: "Ankara Cad. Hocapasa Sk. Demir Han
-  No:1 Sirkeci/Istanbul Sirkeci, Istanbul 34080 Turkey", description:"We Are Selling High Quality Souvenirs For Our Visitors
+aslan_gift_shop = Store.create!(name: "Aslan Gift Shop",user: user, address: "Istanbul, Turkey", description:"We Are Selling High Quality Souvenirs For Our Visitors
   To Remind Good Memories Of Istanbul Or Giving Their Friends As A Gift. Nargiles, Nazars, Mugs, Bracel
   ets And Every Kind Of Turkish Themed Gifts Are Being Sold In Our Fancy Shop In Sirkeci/istanbul.")
   file = URI.open('https://q-cf.bstatic.com/images/hotel/max1024x768/186/186682383.jpg')
   aslan_gift_shop.photo.attach(io: file, filename: 'aslan_gift_shop.png', content_type: 'image/png')
 
 tree_of_life_ceramics_and_gift_shop = Store.create!(name: "Tree of Life Ceramics & Gift Shop",user: user,
-  address: "Binbirdirek Meydani Sokak no 3/A, Istanbul 34122 Turkey", description:"Tree of Life
+  address: "Binbirdirek Meydani Sokak, Istanbul Turkey", description:"Tree of Life
   Ceramics & Gift Shop is newly open and provides new interesting products with an excellent customer
   service")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/da/db/ff/tree-of-life-ceramics.jpg')
@@ -63,19 +61,17 @@ ruby_ceramics_and_gift_shop = Store.create!(name: "Ruby Ceramics & Gift Shop",us
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/ee/d8/25/ruby-ceramics-gift-shop.jpg')
   ruby_ceramics_and_gift_shop.photo.attach(io: file, filename: 'ruby_ceramics_and_gift_shop.png', content_type: 'image/png')
 
-heritage_nomadic_art_gallery = Store.create!(name: "Heritage Nomadic Art Gallery",user: user, address: "Caferiye Sok. No : 1 34400 Sultan
-  ahmet, Istanbul 34400 Turkey", description:"Discover the magic world of kilims and carpets. Awide range of exceptional villa
+heritage_nomadic_art_gallery = Store.create!(name: "Heritage Nomadic Art Gallery",user: user, address: "Caferiye Sok, Istanbul ,Turkey", description:"Discover the magic world of kilims and carpets. Awide range of exceptional villa
   ge rugs, individually handmade with natural dyes and the finest handspun wool.")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-s/05/0e/84/c4/heritage-nomadic-art.jpg')
   heritage_nomadic_art_gallery.photo.attach(io: file, filename: 'heritage_nomadic_art_gallery.png', content_type: 'image/png')
 
-rosemary_spice_and_gift = Store.create!(name: "Rosemary spice & gift",user: user, address: "kaleci Sokak no 8 Kucukayasofya mah., Istanbul
- 34122 Turkey", description:"Dear customer our shop near by Sultanahmet mosque we have ceramics special plates and may gift almo
+rosemary_spice_and_gift = Store.create!(name: "Rosemary spice & gift",user: user, address: "kaleci Sokak, Istanbul,Turkey", description:"Dear customer our shop near by Sultanahmet mosque we have ceramics special plates and may gift almo
  st you can find everything about gift in our shop")
   file = URI.open('https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/00/ea/af/rosemary-spice-gift.jpg')
   rosemary_spice_and_gift.photo.attach(io: file, filename: 'rosemary_spice_and_gift.png', content_type: 'image/png')
 
-galeria_rugs = Store.create!(name: "Galeria Rugs",user: user, address: "Taya Hatun Sk. No. 8E Sirkeci, Istanbul 34122 Turkey",
+galeria_rugs = Store.create!(name: "Galeria Rugs",user: user, address: "Taya Hatun Sk, Istanbul,Turkey",
   description:"Galeria Rugs was established in 2008. Its founder, Selcuk Orman, has extensive experience in carpets from all over
   the world having being a director for international carpet galleries and auction houses. Our purpose is to share the true exper
   ience and knowledge we have of hand woven carpets with enthusiasts and collectors around the world. Since the knowledge of this

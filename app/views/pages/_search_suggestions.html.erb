@@ -1,18 +1,21 @@
  <div class="search-suggestions p-3">
+  <h2 style="text-align: center;">Here are some products</h2>
    <hr>
    <div class="row">
     <% @products.all.sample(4).each do |product| %>
     <div class="col">
-      <%= render 'products/product_card', product: product %>
+      <%= render 'products_cards', product: product %>
     </div>
     <% end %>
+    <br>
+    <div class="store" style="min-width: 100%;">
+    <h2 style="text-align: center;">Here are some stores</h2>
+    <hr/>
+    </div>
     <div class="row">
       <% @stores.all.sample(4).each do |store| %>
       <div class="col">
-        <div class="card">
-          <h1><%= store.name %></h1>
-          <p><%= store.description %></p>
-        </div>
+       <%= render 'stores_cards', store: store %>
       </div>
       <% end %>
     </div>

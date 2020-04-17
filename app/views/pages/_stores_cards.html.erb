@@ -1,26 +1,25 @@
 <div class="wrapper">
   <div class="container-card">
     <div class="top">
-      <% if product.photo.attached? %>
-      <%= cl_image_tag product.photo.key, class: "img-card" %>
+      <% if store.photo.attached? %>
+      <%= cl_image_tag store.photo.key, class: "img-card", style: "height: 100%;" %>
       <% else %>
-      <%= link_to store_product_path(@store, product) do %>
-      <%= image_tag'https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80', class: "img-card" %>
+      <%= link_to store_path(store) do %>
+      <%= image_tag'https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80', class: "img-card",style: "height: 100%;" %>
       <% end %>
       <% end %>
     </div>
     <div class="bottom">
       <div class="left">
         <div class="details">
-          <h4><%= link_to product.name, store_product_path(@store, product) %></h4>
-          <p><%= product.price %>₺</p>
+          <h4><%= link_to store.name, store_path(store) %></h4>
+          <p>Store</p>
         </div>
-        <div class="buy"><i class="fas fa-shopping-bag"></i></div>
       </div>
       <div class="right">
         <div class="done"><i class="fas fa-check"></i></div>
         <div class="details">
-          <p><strong><%= product.name %></strong></p>
+          <p><strong><%= store.name %></strong></p>
           <p>Added to your wishlist!</p>
         </div>
         <div class="remove"><i class="fas fa-times"></i></div>
@@ -29,7 +28,7 @@
     <div class="inside">
       <div class="icon"><i class="fas fa-info"></i></div>
       <div class="contents">
-       <h4><%= product.description %></h4>
+       <h4><%= store.description %></h4>
      </div>
    </div>
  </div>
