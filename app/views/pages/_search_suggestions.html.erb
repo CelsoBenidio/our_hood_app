@@ -1,5 +1,5 @@
-<div class="container">
-  <h1>Here are our products and stores in our app</h1>
+ <h2 style="text-align:center;">Here are our products and stores</h2>
+  <hr>
   <div class="row">
     <% @products.all.sample(4).each do |product| %>
     <div class="col">
@@ -20,7 +20,6 @@
       <% end %>
     </div>
   </div>
-</div>
 <br>
 <br>
 <%= link_to "Back to Homepage", root_path, class: 'btn button m-1' %>
