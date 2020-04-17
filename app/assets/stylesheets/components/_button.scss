@@ -26,6 +26,21 @@ color: white;
   color: white;
 }
 
+.homepage-primary-button{
+  background-color: #10E380;
+  color: white;
+  border-radius: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border-radius: 50px;
+}
+
+.homepage-primary-button:hover{
+  background-color: #0DBF6C;
+  color: white;
+}
+
 .add-to-btn {
   background-color: #EE4266;
   color: white;
@@ -41,3 +56,16 @@ color: white;
     transition: 0.4s;
   }
 }
+
+.search-button{
+  background-color: #10E380;
+  color: white;
+  border-radius: 5px;
+  padding: 0px 24px;
+}
+
+.search-button:hover{
+  background-color: #0DBF6C;
+  color: white;
+}
+

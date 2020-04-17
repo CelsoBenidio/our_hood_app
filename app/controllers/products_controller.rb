@@ -3,6 +3,13 @@ class ProductsController < ApplicationController
   before_action :set_store
 
   def index
+    if params[:query].present?
+      @products_results = PgSearch.multisearch(params[:query])
+      @products = @store.products
+    else
+      @products = @store.products
+    end
+
     @products = policy_scope(@store.products)
   end
 
