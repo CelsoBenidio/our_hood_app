@@ -6,10 +6,14 @@
 
 }
 
+.similiar-items {
+  display: inline-flex;
+}
+
 .image-container {
  margin: 30px;
  width: 400px;
- height: 400px;
+ height: 500px;
 }
 
 .product-img {
@@ -21,7 +25,7 @@
 .product-info {
   display: grid;
   width: 400px;
-  height: 400px;
+  height: 500px;
   margin: 20px;
   padding-top: 40px;
   padding-left: 20px;
@@ -32,11 +36,26 @@
   margin: 10px;
 }
 
+#similiar-header{
+  padding: 10px;
+}
+
 .add-btn {
   text-align: center;
 }
 
 .backlinks {
   margin-top: 50px;
-  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fa-trash {
+  font-size: 36px;
+}
+
+.fa-info-circle {
+  font-size: 24px;
 }
