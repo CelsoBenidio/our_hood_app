@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Here are our products and stores in our app</h1>
+  <h1>Top search of our beloved Our💚Hood customers</h1>
   <div class="row">
-    <% @products.all.sample(4).each do |product| %>
+    <% @products.all.sample(3).each do |product| %>
     <div class="col">
       <div class="card">
         <h1><%= product.name %></h1>
@@ -10,7 +10,7 @@
     </div>
     <% end %>
     <div class="row">
-      <% @stores.all.sample(4).each do |store| %>
+      <% @stores.all.sample(3).each do |store| %>
       <div class="col">
         <div class="card">
           <h1><%= store.name %></h1>
@@ -24,3 +24,4 @@
 <br>
 <br>
 <%= link_to "Back to Homepage", root_path, class: 'btn button m-1' %>
+

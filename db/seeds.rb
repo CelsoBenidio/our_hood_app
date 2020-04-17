@@ -23,6 +23,65 @@ paris_texas = Store.create!(name: "Paris Texas", address: "Bereketzade, İstanbu
 file = URI.open('https://res.cloudinary.com/dbjtqhjxi/image/upload/v1586955844/images/ParisTexas/ParisTexasOutside_efzzzd.png')
 paris_texas.photo.attach(io: file, filename: 'paris_texas.png', content_type: 'image/png')
 
+
+#New stores
+tuncer_gift_shop = Store.create!(name: "Tuncer Gift Shop", address: "Taya Hatun Sokak Sukran Han NO:C3
+  Sirkeci, Istanbul 34110 Turkey", description:"Tuncer Gift Shop is located in Sultanahmet since 2000s.
+  At the beginning, we started working just on the street and just with one person who is our founder.
+  After a while we expanded our job and we opened first showroom in 2008. When we came to 2012, we have
+  five showrooms in Istanbul and nearly 15 team members.We believe that customers are special; so we
+  made each showroom special by itself. We have two showrooms for ceramics, one shop for special home
+  textile and carpets and one showroom is just for selling jewellery. Our products are also special only
+  for our showrooms and you cannot find the same product in any other shops")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+
+aslan_gift_shop = Store.create!(name: "Aslan Gift Shop", address: "Ankara Cad. Hocapasa Sk. Demir Han
+  No:1 Sirkeci/Istanbul Sirkeci, Istanbul 34080 Turkey", description:"We Are Selling High Quality Souvenirs For Our Visitors
+  To Remind Good Memories Of Istanbul Or Giving Their Friends As A Gift. Nargiles, Nazars, Mugs, Bracel
+  ets And Every Kind Of Turkish Themed Gifts Are Being Sold In Our Fancy Shop In Sirkeci/istanbul.")
+  file = URI.open('')
+  aslan_gift_shop.photo.attach(io: file, filename: 'aslan_gift_shop.png', content_type: 'image/png')
+
+tree_of_life_ceramics_and_gift_shop = Store.create!(name: "Tree of Life Ceramics & Gift Shop",
+  address: "Binbirdirek Meydani Sokak no 3/A, Istanbul 34122 Turkey", description:"Tree of Life
+  Ceramics & Gift Shop is newly open and provides new interesting products with an excellent customer
+  service")
+  file = URI.open('')
+  tree_of_life_ceramics_and_gift_shop.photo.attach(io: file, filename: 'tree_of_life_ceramics_and_gift
+  _shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+tuncer_gift_shop = Store.create!(name: "", address: "", description:"")
+  file = URI.open('')
+  tuncer_gift_shop.photo.attach(io: file, filename: 'tuncer_gift_shop.png', content_type: 'image/png')
+
+
+
 categories = %w(watches jewelleries sunglasses food vintage accessories )
 categories.each do |category|
   Category.create!(name:category)
