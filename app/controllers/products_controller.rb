@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.store = @store
     authorize @product
+    add_categories
     if @product.save
       redirect_to store_product_path(@store, @product), notice: 'Product is created.'
     else
@@ -45,6 +46,13 @@ class ProductsController < ApplicationController
 
   private
 
+  def add_categories
+    params["product"]["category_ids"].each do |category_id|
+      category = Category.find(category_id)
+      CategoryProduct.create!(category: category, product: @product)
+    end
+  end
+
   def set_product
     @product = Product.find(params[:id])
     authorize @product
@@ -55,7 +63,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :price, :description)
+    params.require(:product).permit(:name, :price, :description, :photo, :category_ids)
   end
 
 end

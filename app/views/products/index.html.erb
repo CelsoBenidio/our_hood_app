@@ -1,18 +1,46 @@
-<div class="container">
-  <h1>Products</h1>
-
-  <% @products.each do |product| %>
-    <div class="card-product">
-      <%= image_tag('https://www.seçkinoptik.com/image/cache/gunes-gozlukleri/rb2140-901-50-3n-wayfarer-gunes-gozlukleri-ray-ban-1000x1000.jpg') %>
-      <div class="card-product-infos">
-        <h2><%= link_to product.name, store_product_path(@store, product) %></h2>
-        <h3><%= product.price %>₺</h3>
-         <p> <%= product.description %></p>
+<div class="index-container">
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col">
+      <div class="wrapper">
+        <div class="container-card">
+          <div class="top">
+            <% if product.photo.attached? %>
+              <%= cl_image_tag product.photo.key, class: "img-card" %>
+            <% else %>
+              <%= image_tag'https://www.seçkinoptik.com/image/cache/gunes-gozlukleri/rb2140-901-50-3n-wayfarer-gunes-gozlukleri-ray-ban-1000x1000.jpg', class: "img-card" %>
+            <% end %>
+            </div>
+          <div class="bottom">
+            <div class="left">
+              <div class="details">
+                <h4><%= link_to product.name, store_product_path(@store, product) %></h4>
+                <p><%= product.price %>₺</p>
+              </div>
+              <div class="buy"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+            <div class="right">
+              <div class="done"><i class="fas fa-check"></i></div>
+              <div class="details">
+                <p><strong><%= product.name %></strong></p>
+                <p>Added to your wishlist!</p>
+              </div>
+              <div class="remove"><i class="fas fa-times"></i></div>
+            </div>
+          </div>
+          <div class="inside">
+            <div class="icon"><i class="fas fa-info"></i></div>
+            <div class="contents">
+              <h4><%= product.description %></h4>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-      <% end %>
-
+    </div>
+    <% end %>
+  </div>
+</div>
+<div class="backlinks">
   <%= link_to "Add a new product", new_store_product_path, class: "button" %>
   <%= link_to "Back to the store", store_path(@store), class:"button" %>
 </div>
-
