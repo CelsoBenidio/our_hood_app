@@ -104,64 +104,77 @@ end
 
 
 
-mosaic_table_lamp_1 = Product.create!(name: "Mosaic Table Lamp Model 1", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
-mosaic_table_lamp_2 = Product.create!(name: "Mosaic Table Lamp Model 2", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
-mosaic_table_lamp_3 = Product.create!(name: "Mosaic Table Lamp Model 3", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
-mosaic_table_lamp_4 = Product.create!(name: "Mosaic Table Lamp Model 4", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
-mosaic_table_lamp_5 = Product.create!(name: "Mosaic Table Lamp Model 5", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
-mosaic_table_lamp_6 = Product.create!(name: "Mosaic Table Lamp Model 6", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop)
+mosaic_table_lamp_1 = Product.create!(name: "Mosaic Table Lamp Model 1", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop,
+  price: 250)
+mosaic_table_lamp_2 = Product.create!(name: "Mosaic Table Lamp Model 2", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop,
+  price: 250)
+mosaic_table_lamp_3 = Product.create!(name: "Mosaic Table Lamp Model 3", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop,
+  price: 250)
+mosaic_table_lamp_4 = Product.create!(name: "Mosaic Table Lamp Model 4", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop,
+  price: 250)
+mosaic_table_lamp_5 = Product.create!(name: "Mosaic Table Lamp Model 5", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop,
+  price: 250)
+mosaic_table_lamp_6 = Product.create!(name: "Mosaic Table Lamp Model 6", description: "Mosaic table lamp is excellent item to have it home.", store: aslan_gift_shop,
+  price: 250)
 prayer_beads_1 = Product.create!(name: "Andiz Tree Prayer Beads Model 1", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 prayer_beads_2 = Product.create!(name: "Andiz Tree Prayer Beads Model 2", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 prayer_beads_3 = Product.create!(name: "Andiz Tree Prayer Beads Model 3", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 prayer_beads_4 = Product.create!(name: "Andiz Tree Prayer Beads Model 4", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 prayer_beads_5 = Product.create!(name: "Andiz Tree Prayer Beads Model 5", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 prayer_beads_6 = Product.create!(name: "Andiz Tree Prayer Beads Model 6", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 prayer_beads_7 = Product.create!(name: "Andiz Tree Prayer Beads Model 7", description: "A bead is a small, decorative object that is formed in a variety of shapes and
- sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery)
+ sizes of a material such as stone, bone, shell, glass, plastic, wood or pearl and with a small hole for threading or stringing.", store: heritage_nomadic_art_gallery,
+ price: 100)
 turkish_tea_pot_model_no1 = Product.create!(name: "Turkish Teapot Model No1", description: "Turkish Tea Pots (Another name is Çaydanlık) are
-  really important to brew perfect tea.", store: tuncer_gift_shop)
+  really important to brew perfect tea.", store: tuncer_gift_shop, price: 180)
 turkish_tea_pot_model_no2 = Product.create!(name: "Turkish Teapot Model No2", description: "Turkish Tea Pots (Another name is Çaydanlık) are
-  really important to brew perfect tea.", store: last_shop_gift_shop)
+  really important to brew perfect tea.", store: last_shop_gift_shop, price: 180)
 turkish_tea_pot_model_no3 = Product.create!(name: "Turkish Teapot Model No3", description: "Turkish Tea Pots (Another name is Çaydanlık) are
-  really important to brew perfect tea.", store: sahaflar_carsisi)
+  really important to brew perfect tea.", store: sahaflar_carsisi, price: 180)
 turkish_tea_pot_model_no4 = Product.create!(name: "Turkish Teapot Model No4", description: "Turkish Tea Pots (Another name is Çaydanlık) are
-  really important to brew perfect tea.", store:rosemary_spice_and_gift)
+  really important to brew perfect tea.", store:rosemary_spice_and_gift, price: 180)
 ray_ban_sunglass_1 = Product.create!(name: "Ray-Ban RB2140 Model 1", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_2 = Product.create!(name: "Ray-Ban RB2140 Model 2", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_3 = Product.create!(name: "Ray-Ban RB2140 Model 3", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_4 = Product.create!(name: "Ray-Ban RB2140 Model 4", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_5 = Product.create!(name: "Ray-Ban RB2140 Model 5", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_6 = Product.create!(name: "Ray-Ban RB2140 Model 6", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_7 = Product.create!(name: "Ray-Ban RB2140 Model 7", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_8 = Product.create!(name: "Ray-Ban RB2140 Model 8", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_9 = Product.create!(name: "Ray-Ban RB2140 Model 9", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 ray_ban_sunglass_10 = Product.create!(name: "Ray-Ban RB2140 Model 10", description: "The Original Ray-Ban Wayfarer features legendary G-15
   lenses, in both polarized and non-polarized options, perfect for both women and men. Made from high-quality glass, Ray-Ban lenses are prescription ready.", store:
-  last_shop_gift_shop)
+  last_shop_gift_shop, price: 760)
 
 
 
