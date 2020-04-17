@@ -2,7 +2,9 @@
   <div class="banner-content">
     <h1>Our Hood stores</h1>
     <p>Awesome stores for developers</p>
+    <% if policy(Store).create? %>
     <%= link_to "Add a store", new_store_path, class: "btn btn-lg button" %>
+    <% end %>
   </div>
 </div>
 <div class="container">
