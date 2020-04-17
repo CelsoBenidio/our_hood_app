@@ -1,5 +1,6 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :destroy]
+  skip_before_action :authenticate_user!, only: [:show, :index]
   def index
     @stores = policy_scope(Store).all
 
