@@ -1,8 +1,11 @@
 <div class="show-page-container">
   <div class="image-container">
-    <%= image_tag 'https://www.seçkinoptik.com/image/cache/gunes-gozlukleri/rb2140-901-50-3n-wayfarer-gunes-gozlukleri-ray-ban-1000x1000.jpg', class: "product-img" %>
+    <% if @product.photo.attached? %>
+    <%= cl_image_tag @product.photo.key, class: "product-img" %>
+    <% else %>
+    <%= image_tag'https://www.seçkinoptik.com/image/cache/gunes-gozlukleri/rb2140-901-50-3n-wayfarer-gunes-gozlukleri-ray-ban-1000x1000.jpg', class: "product-img" %>
+    <% end %>
   </div>
-
   <div class="product-info">
     <header>
       <h2><%= @product.name %></h2>
@@ -26,7 +29,7 @@
 
 <div class="backlinks">
   <%= link_to store_product_path(@store, @product), method: :delete, data: { confirm: "Are you sure?" } do %>
-    <i class="fa fa-trash destroy_dose"></i>
+  <i class="fa fa-trash destroy_dose"></i>
   <% end %>
 
   <%=  link_to "Back to all products", store_products_path, class:"button" %>
