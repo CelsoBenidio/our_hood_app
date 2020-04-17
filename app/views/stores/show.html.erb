@@ -18,4 +18,12 @@
   data: {confirm: "Are you sure?"}%>
   </div>
 </div>
+
+<%= link_to "Back to all stores", stores_path, class: 'btn button button-first m-1' %>
+<% if policy(@store).destroy? %>
+<%= link_to "Delete", store_path(@store),
+method: :delete,
+data: {confirm: "Are you sure?"}, class: 'btn button button-secondary m-1'%>
+<% end %>
+
 </div>

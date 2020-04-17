@@ -6,7 +6,7 @@ class StorePolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user || user.admin
+    user.admin
   end
 
   def update?

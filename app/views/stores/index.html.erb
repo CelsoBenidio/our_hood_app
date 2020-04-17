@@ -2,7 +2,9 @@
   <div class="container banner-content">
     <h2 style="padding-bottom: 10px">Manage your stores</h2>
     <p style="padding-bottom: 20px">Thousands of stores have increased their sales by an average of 20%.</p>
-    <%= link_to "Add a new store", new_store_path, class: "btn homepage-primary-button" %>
+    <% if policy(Store).create? %>
+      <%= link_to "Add a store", new_store_path, class: "btn btn-lg button" %>
+    <% end %>
   </div>
 </div>
 

@@ -1,24 +1,28 @@
-<div class="container">
-  <div class="row">
+ <div class="search-suggestions p-3">
+  <h2 style="text-align: center;">Here are some products</h2>
+   <hr>
+   <div class="row">
     <% @products.all.sample(4).each do |product| %>
     <div class="col">
-      <div class="card">
-        <h1><%= product.name %></h1>
-        <p><%= product.description %></p>
-      </div>
+      <%= render 'products_cards', product: product %>
     </div>
     <% end %>
+    <br>
+    <div class="store" style="min-width: 100%;">
+    <h2 style="text-align: center;">Here are some stores</h2>
+    <hr/>
+    </div>
     <div class="row">
       <% @stores.all.sample(4).each do |store| %>
       <div class="col">
-        <div class="card">
-          <h1><%= store.name %></h1>
-          <p><%= store.description %></p>
-        </div>
+       <%= render 'stores_cards', store: store %>
       </div>
       <% end %>
     </div>
   </div>
+  <br>
+  <br>
+  <%= link_to "Back to Homepage", root_path, class: 'btn button m-1' %>
 </div>
 <br>
 <br>
