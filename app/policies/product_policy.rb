@@ -5,11 +5,7 @@ class ProductPolicy < ApplicationPolicy
     end
   end
   def create?
-    true
-  end
-
-  def show?
-    true
+    record.user == user || user.admin
   end
 
   def update?
@@ -18,5 +14,9 @@ class ProductPolicy < ApplicationPolicy
 
   def destroy?
     record.user == user || user.admin
+  end
+
+  def show?
+    true
   end
 end
