@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <div class="container-card">
+    <div class="top">
+      <% if product.photo.attached? %>
+      <%= cl_image_tag product.photo.key, class: "img-card" %>
+      <% else %>
+      <%= link_to store_product_path(@store, product) do %>
+      <%= image_tag'https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80', class: "img-card" %>
+      <% end %>
+      <% end %>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <div class="details">
+          <h4><%= link_to product.name, store_product_path(@store, product) %></h4>
+          <p><%= product.price %>₺</p>
+        </div>
+        <div class="buy"><i class="fas fa-shopping-bag"></i></div>
+      </div>
+      <div class="right">
+        <div class="done"><i class="fas fa-check"></i></div>
+        <div class="details">
+          <p><strong><%= product.name %></strong></p>
+          <p>Added to your wishlist!</p>
+        </div>
+        <div class="remove"><i class="fas fa-times"></i></div>
+      </div>
+    </div>
+    <div class="inside">
+      <div class="icon"><i class="fas fa-info"></i></div>
+      <div class="contents">
+       <h4><%= product.description %></h4>
+     </div>
+   </div>
+ </div>
+</div>
