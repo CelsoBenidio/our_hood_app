@@ -5,6 +5,7 @@
       <%= f.input :name %>
       <%= f.input :price %>
       <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
       <%= f.association :categories, collection: Category.all, input_html: { multiple: true, class:"select2_form" }, include_hidden: false, as: :select  %>
     </div>
 
