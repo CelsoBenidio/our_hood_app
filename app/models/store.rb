@@ -1,5 +1,6 @@
 class Store < ApplicationRecord
   has_many :products, dependent: :destroy
+  belongs_to :user
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true, uniqueness: true
   geocoded_by :address
